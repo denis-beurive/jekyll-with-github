@@ -11,7 +11,7 @@
 This Python script retrieves the GitHub Pages dependency versions and generates the 'Gemfile' based on the specified versions:
 [jekyll-github.py](jekyll-github.py)
 
-    python jekyll-github.py gemfile
+    python jekyll-github.py
 
 As of November 25, 2024 the generated "`Gemfile`" is as follows: [Gemfile](data/gemfile-20241125)
 
