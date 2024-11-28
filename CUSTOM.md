@@ -1,4 +1,4 @@
-# Using the Docker image
+# Using a custom made Docker image
 
 ## Build the images
 
@@ -6,8 +6,8 @@ The following images have been constructed in accordance with GitHub specificati
 the version of Ruby is `3.3.4`.
 
 ```Batchfile
-docker build --tag ubuntu-jekyll-github-ssh --progress=plain -f Dockerfile-ssh .
-docker build --tag ubuntu-jekyll-github-cmd --progress=plain -f Dockerfile-cmd .
+docker build --tag ruby_3.3.4_ssh --progress=plain -f Dockerfile-ruby-3.3.4-ssh .
+docker build --tag ruby_3.3.4_cmd --progress=plain -f Dockerfile-ruby-3.3.4-cmd .
 docker image ls
 ```
 
@@ -26,7 +26,7 @@ docker run --detach ^
            --volume="%CD%:/srv/jekyll" ^
            --publish 4000:4000/tcp ^
            --publish 2222:22/tcp ^
-           ubuntu-jekyll-github-ssh
+           ruby_3.3.4_ssh
 ```
 
 The OS is configured with 2 UNIX users:
@@ -77,12 +77,14 @@ site_name="my-blog"
 cd "/srv/jekyll/${site_name}"
 bundle install
 bundle update
-jekyll serve -w --port 4000 &
+jekyll serve --host 0.0.0.0 --watch --port 4000 &
 # Optionaly
 px -awx
 netsat -a
 curl localhost:4000
 ```
+
+> Please, make sure to set the option `--host 0.0.0.0`, otherwise the HTTP server will not be accessible from the host.
 
 ## Run the non-interective container
 
@@ -92,8 +94,9 @@ docker run --net=bridge ^
            --rm ^
            --volume="%CD%:/srv/jekyll" ^
            --publish 4000:4000/tcp ^
-           ubuntu-jekyll-github-cmd ^
-           sh -c "ruby -v && cd '/srv/jekyll/%site_name%' && bundle install && bundle update && jekyll serve -w --port 4000"
+           ruby_3.3.4_cmd ^
+           sh -c "ruby -v && cd /srv/jekyll/%site_name% && bundle install && bundle update && jekyll serve --host 0.0.0.0 --watch --port 4000"
 ```
 
+> Please, make sure to set the option `--host 0.0.0.0`, otherwise the HTTP server will not be accessible from the host.
 
