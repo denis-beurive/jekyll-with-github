@@ -14,6 +14,9 @@ Whichever solution you choose, the procedure remains consistent when focusing on
 2. Replace your site's existing `Gemfile` with the newly generated one.  
 3. Launch the Jekyll web server.  
 
+> Kindly note that the command lines provided in this document are tailored for Windows Command Prompt (CMS/DOS).
+> Adapting them for BASH is a simple task.
+
 ## Generate the "Gemfile" that matches the GitHub environment for Jekyll
 
 This Python script retrieves the GitHub Pages dependency versions and generates the 'Gemfile' based on the specified versions:

@@ -14,7 +14,7 @@ docker image ls
 * `ruby_3.3.4_ssh`: interactive container. You login using SSH.
 * `ruby_3.3.4_cmd`: non-interactive container. You execute commands from `docker run`.
 
-## Run the interactive container
+## Using the interactive container
 
 ```Batchfile
 docker run --detach ^
@@ -67,6 +67,7 @@ scp -o IdentitiesOnly=yes -o IdentityFile=data/private.key -P 2222 dev@localhost
 You can launch the web server by logging into the container:
 
 ```Batchfile
+# Password: dev
 ssh -o IdentitiesOnly=yes -p 2222 dev@localhost
 ```
 
@@ -86,7 +87,7 @@ curl localhost:4000
 
 > Please, make sure to set the option `--host 0.0.0.0`, otherwise the HTTP server will not be accessible from the host.
 
-## Run the non-interective container
+## Using the non-interective container
 
 ```Batchfile
 SET site_name="my-blog"
@@ -95,7 +96,7 @@ docker run --net=bridge ^
            --volume="%CD%:/srv/jekyll" ^
            --publish 4000:4000/tcp ^
            ruby_3.3.4_cmd ^
-           sh -c "ruby -v && cd /srv/jekyll/%site_name% && bundle install && bundle update && jekyll serve --host 0.0.0.0 --watch --port 4000"
+           sh -c "cd \"/srv/jekyll/%site_name%\" && bundle install && bundle update && jekyll serve --host 0.0.0.0 --watch --port 4000"
 ```
 
 > Please, make sure to set the option `--host 0.0.0.0`, otherwise the HTTP server will not be accessible from the host.
