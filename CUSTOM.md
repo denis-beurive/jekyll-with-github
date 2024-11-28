@@ -87,6 +87,8 @@ curl localhost:4000
 
 > Please, make sure to set the option `--host 0.0.0.0`, otherwise the HTTP server will not be accessible from the host.
 
+From the host, open the following URL: [http://127.0.0.1:4000](http://127.0.0.1:4000)
+
 ## Using the non-interective container
 
 ```Batchfile
@@ -101,3 +103,4 @@ docker run --net=bridge ^
 
 > Please, make sure to set the option `--host 0.0.0.0`, otherwise the HTTP server will not be accessible from the host.
 
+From the host, open the following URL: [http://127.0.0.1:4000](http://127.0.0.1:4000)
