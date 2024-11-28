@@ -11,8 +11,8 @@ docker build --tag ruby_3.3.4_cmd --progress=plain -f Dockerfile-ruby-3.3.4-cmd 
 docker image ls
 ```
 
-* `ubuntu-jekyll-github-ssh`: interactive container. You login using SSH.
-* `ubuntu-jekyll-github-cmd`: non-interactive container. You execute commands from `docker run`.
+* `ruby_3.3.4_ssh`: interactive container. You login using SSH.
+* `ruby_3.3.4_cmd`: non-interactive container. You execute commands from `docker run`.
 
 ## Run the interactive container
 
