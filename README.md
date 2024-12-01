@@ -19,6 +19,8 @@ Whichever solution you choose, the procedure remains consistent when focusing on
 
 ## Using Jekyll to generate the site from a template
 
+For this demonstration, we utilize the following Jekyll theme: [hacker](https://github.com/pages-themes/hacker). Simply download the ZIP file containing the theme and extract its contents. The "[hacker-theme](hacker-theme)" directory holds the extracted files.
+
 The previously outlined three-step procedure is elaborated in detail below.
 
 ### 1. Generate the "Gemfile" that matches the GitHub environment for Jekyll
@@ -41,8 +43,7 @@ Replace "[my-blog/Gemfile](my-blog/Gemfile)" by the one you've previouly generat
 
 ## Pushing the site on GitHub
 
-After successfully testing the site locally, you can proceed to push it to GitHub. To accomplish this, simply
-follow the steps outlined below.
+After successfully testing the site locally, you can proceed to push it to GitHub. To accomplish this, simply follow the steps outlined below.
 
 From : [Creating a GitHub Pages site with Jekyll](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll)
 
@@ -81,11 +82,11 @@ repository: denis-beurive/jekyll-with-github
 
 6. Next, configure your repository to instruct GitHub to generate the site using the Jekyll theme:
 
-![](kekyll-activate.png)
+![](data/kekyll-activate.png)
 
 7. Allow GitHub some time to process the site. Once completed, you will observe the following:
 
-![](kekyll-activate-done.png)
+![](data/kekyll-activate-done.png)
 
 ## Troubleshooting
 
