@@ -82,11 +82,11 @@ repository: denis-beurive/jekyll-with-github
 
 6. Next, configure your repository to instruct GitHub to generate the site using the Jekyll theme:
 
-![](data/kekyll-activate.png)
+![](data/jekyll-activate.png)
 
 7. Allow GitHub some time to process the site. Once completed, you will observe the following:
 
-![](data/kekyll-activate-done.png)
+![](data/jekyll-activate-done.png)
 
 ## Troubleshooting
 
