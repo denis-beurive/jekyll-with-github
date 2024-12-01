@@ -6,7 +6,7 @@ import json
 from datetime import datetime
 
 now = datetime.now()
-EXCLUDE: Final[List[str]] = ["ruby", "jekyll-github-metadata"]
+EXCLUDE: Final[List[str]] = ["ruby", "jekyll-github-metadata", "github-pages", "github-pages-health-check"]
 DATETIME_FORMATEE: Final[str] = now.strftime("%Y-%m-%d")
 
 def generate_gemfile(specifications: Dict[str, str]):

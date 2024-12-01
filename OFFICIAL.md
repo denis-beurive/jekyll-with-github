@@ -1,7 +1,7 @@
 # Using an official Jekyll image
 
 ```Batchfile
-set site_name=my-blog
+set site_name=hacker-theme
 
 docker pull jekyll/jekyll
 docker image ls

@@ -74,7 +74,7 @@ ssh -o IdentitiesOnly=yes -p 2222 dev@localhost
 Then, start the server:
 
 ```bash
-site_name="my-blog"
+site_name="hacker-theme"
 cd "/srv/jekyll/${site_name}"
 bundle install
 bundle update
@@ -92,7 +92,7 @@ From the host, open the following URL: [http://127.0.0.1:4000](http://127.0.0.1:
 ## Using the non-interective container
 
 ```Batchfile
-SET site_name="my-blog"
+SET site_name="hacker-theme"
 docker run --net=bridge ^
            --rm ^
            --volume="%CD%:/srv/jekyll" ^
